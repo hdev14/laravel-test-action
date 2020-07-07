@@ -1,5 +1,11 @@
 #!/bin/sh -l
 
-echo "Hello $1"
-time=$(date)
-echo "::set-output name=time::$time"
+composer i --prefer-dist
+
+cp .env.example .env
+
+php artisan key:generate
+
+php artisan test --process-isolation
+
+
