@@ -1,0 +1,15 @@
+name: 'Hello my friend'
+description: 'My first action only for test'
+inputs:
+	who-to-greet:
+		description: 'who to greet'
+		required: true
+		default: 'World'
+outputs:
+	time:
+		description: 'The time we greeted you'
+runs:
+	using: 'docker'
+	image: 'Dockerfile'
+	args:
+		- ${{ inputs.who-to-greet }}
