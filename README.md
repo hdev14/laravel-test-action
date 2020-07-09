@@ -1,6 +1,6 @@
 # Laravel Tests Action
 
-This action checks the automed tests in projects building with Laravel Framework.
+This action checks the automated tests in projects building with Laravel Framework.
 
 ## Example usage
 ```
