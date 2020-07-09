@@ -1,21 +1,9 @@
-# Hello world docker action
+# Laravel Tests Action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
-
-## Inputs
-
-### `who-to-greet`
-
-**Required** The name of the person to greet. Default `"World"`.
-
-## Outputs
-
-### `time`
-
-The time we greeted you.
+This action checks the automed tests in projects building with Laravel Framework.
 
 ## Example usage
 
-uses: actions/hello-world-docker-action@v1
-with:
-  who-to-greet: 'Mona the Octocat'
+steps:
+  - name: Laravel Test Action
+    uses: hdev14/laravel-test-action@v1
