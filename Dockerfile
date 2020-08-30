@@ -1,7 +1,7 @@
 FROM composer:latest
 
-RUN apt-get update && \
-    apt-get install -y \
+RUN apk update && \
+    apk install -y \
     libzip-dev \
     libjpeg62-turbo-dev \
     libpng-dev \
