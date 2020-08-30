@@ -5,9 +5,12 @@ RUN apk update && \
     libzip-dev \
     libjpeg-turbo-dev \
     libpng-dev \
-    zlib-dev
+    zlib-dev \
+    freetype-dev
 
 RUN docker-php-ext-install gd
+
+RUN docker-php-ext-configure gd
 
 COPY entrypoint.sh /entrypoint.sh
 
