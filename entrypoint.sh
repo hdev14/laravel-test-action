@@ -2,7 +2,7 @@
 
 composer i --prefer-dist
 
-php -v
+apt-get update && apt-get -y install php-gd
 
 cp .env.example .env
 
