@@ -1,7 +1,7 @@
 FROM composer:latest
 
 RUN apk update && \
-    apk add --no-chace \
+    apk add --no-cache \
     libzip-dev \
     libjpeg-turbo-dev \
     zlib-dev \
