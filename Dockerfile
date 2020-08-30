@@ -10,7 +10,7 @@ RUN apk update && \
 
 RUN docker-php-ext-install gd
 
-RUN docker-php-ext-configure gd
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg
 
 COPY entrypoint.sh /entrypoint.sh
 
