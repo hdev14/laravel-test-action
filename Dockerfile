@@ -3,9 +3,9 @@ FROM composer:latest
 RUN apk update && \
     apk add \
     libzip-dev \
-    libjpeg62-turbo-dev \
+    libjpeg-turbo-dev \
     libpng-dev \
-    zlib1g-dev
+    zlib-dev
 
 RUN docker-php-ext-install gd
 
