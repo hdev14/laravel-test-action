@@ -4,14 +4,16 @@ RUN apk update && \
     apk add --no-chace \
     libzip-dev \
     libjpeg-turbo-dev \
-    libpng-dev \
     zlib-dev \
+    libpng-dev \
     freetype-dev
 
 RUN docker-php-ext-configure gd \
-  --with-gd \
-  --with-jpeg-dir=/usr/include \
-  --with-png-dir=/user/include
+  --enable-gd \
+  --with-jpeg \
+  --with-freetype \
+  --with-png-dir=/usr/include \
+  --with-jpeg-dir=/usr/include
 
 COPY entrypoint.sh /entrypoint.sh
 
