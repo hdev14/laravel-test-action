@@ -12,9 +12,9 @@ RUN docker-php-ext-install gd
 
 RUN docker-php-ext-configure gd \
   --with-gd \
-  --with-jpeg-dir \
-  --with-png-dir \
-  --with-zlib-dir \
+  --with-jpeg \
+  --with-png \
+  --with-zlib \
   --with-freetype
 
 COPY entrypoint.sh /entrypoint.sh
