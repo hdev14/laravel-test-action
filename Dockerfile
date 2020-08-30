@@ -13,7 +13,8 @@ RUN docker-php-ext-install gd
 RUN docker-php-ext-configure gd \
   --enable-gd \
   --with-jpeg \
-  --with-freetype 
+  --with-freetype \
+  --enable-shared 
 
 COPY entrypoint.sh /entrypoint.sh
 
