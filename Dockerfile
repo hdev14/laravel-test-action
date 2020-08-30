@@ -1,7 +1,7 @@
 FROM composer:latest
 
 RUN apk update && \
-    apk add -y \
+    apk add \
     libzip-dev \
     libjpeg62-turbo-dev \
     libpng-dev \
