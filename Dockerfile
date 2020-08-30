@@ -1,21 +1,17 @@
 FROM composer:latest
 
 RUN apk update && \
-    apk add \
+    apk add --no-chace \
     libzip-dev \
     libjpeg-turbo-dev \
     libpng-dev \
     zlib-dev \
     freetype-dev
 
-RUN docker-php-ext-install gd
-
 RUN docker-php-ext-configure gd \
   --with-gd \
-  --with-jpeg \
-  --with-png \
-  --with-zlib \
-  --with-freetype
+  --with-jpeg-dir=/usr/include \
+  --with-png-dir=/user/include
 
 COPY entrypoint.sh /entrypoint.sh
 
