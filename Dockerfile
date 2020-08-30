@@ -11,7 +11,7 @@ RUN apk update && \
 RUN docker-php-ext-install gd
 
 RUN docker-php-ext-configure gd \
-  --with-gd \
+  --enable-gd \
   --with-jpeg \
   --with-freetype 
 
