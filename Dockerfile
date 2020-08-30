@@ -1,10 +1,11 @@
 FROM composer:latest
 
-RUN apt update && \
-    apt install -y \
+RUN apt-get update && \
+    apt-get install -y \
     libzip-dev \
     libjpeg62-turbo-dev \
-    libpng-dev
+    libpng-dev \
+    zlib1g-dev
 
 RUN docker-php-ext-install gd
 
