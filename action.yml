@@ -4,4 +4,3 @@ description: 'Action for unit and integration tests'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  pre-entrypoint: 'setup.sh' 
