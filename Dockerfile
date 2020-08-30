@@ -13,6 +13,7 @@ RUN docker-php-ext-install gd
 RUN docker-php-ext-configure gd \
   --enable-gd \
   --with-jpeg \
+  --with-jpg \
   --with-freetype \
   --enable-shared 
 
