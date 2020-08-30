@@ -8,6 +8,8 @@ RUN apk update && \
     libpng-dev \
     freetype-dev
 
+RUN docker-php-ext-install gd
+
 RUN docker-php-ext-configure gd \
   --with-gd \
   --with-jpeg \
