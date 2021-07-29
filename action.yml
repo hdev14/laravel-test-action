@@ -1,6 +1,9 @@
 # action.yml
 name: 'Laravel Tests'
 description: 'Action for unit and integration tests'
+branding:
+  icon: 'check'
+  color: 'green' 
 runs:
   using: 'docker'
   image: 'Dockerfile'
